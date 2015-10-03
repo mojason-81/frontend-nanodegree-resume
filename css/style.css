@@ -140,7 +140,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 0.5em;
 }
 
 .center-content {
@@ -213,4 +213,14 @@ span {
   .biopic {
     display: block;
   }
+}
+
+
+/*################
+#    My Styling  #
+################*/
+
+.contactIcon {
+  font-size: 3em;
+  color: #fff;
 }
