@@ -71,37 +71,37 @@ var education = {
     {
       "title":  "HTML / CSS",
       "school": "Codecademy",
-      "date":   "2015"
+      "date":   2015
     },
     {
       "title":  "JavaScript",
       "school": "Codecademy",
-      "date":   "2015"
+      "date":   2015
     },
     {
       "title":  "jQuery",
       "school": "Codecademy",
-      "date":   "2015"
+      "date":   2015
     },
     {
       "title":  "Python",
       "school": "Codecademy",
-      "date":   "2015"
+      "date":   2015
     },
     {
       "title":  "Ruby",
       "school": "Codecademy",
-      "date":   "2015"
+      "date":   2015
     },
     {
       "title":  "Web Developer Blueprint",
       "school": "Skillcrush",
-      "date":   "2015"
+      "date":   2015
     },
     {
       "title":  "Ruby on Rails Developer Blueprint",
       "school": "Skillcrush",
-      "date":   "2015"
+      "date":   2015
     },
     {
       "title":  "Front End Developer Nanodegree",
