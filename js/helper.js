@@ -13,10 +13,10 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderRole = '<span>%data%</span>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<span class="orange-text">%data%</span><hr/>';
 var HTMLemail = '<li class="flex-item"><a href="mailto:%data%" TARGET="_blank"><i class="contactIcon fa fa-envelope-square"></i></a></li>';
 var HTMLlinkedin = '<li class="flex-item"><a href="%data%" TARGET="_blank"><i class="contactIcon fa fa-linkedin-square"></i></a></li>';
 var HTMLtwitter = '<li class="flexitem"><a href="%data%" TARGET="_BLANK"><i class="contactIcon fa fa-twitter-square"></i></a></li>'
@@ -39,7 +39,7 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a href="%urldata%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';

@@ -1,29 +1,10 @@
 // Object declarations for various resume sections.
-var contact = {
-  "email":      "jason@mojason.com",
-  "linkedin":   "https://www.linkedin.com/pub/jason-force/80/3a7/43a",
-  "google":     "https://plus.google.com/u/0/116492679110338493730/posts/",
-  "twitter":    "https://twitter.com/mojason_81",
-  "github":     "https://github.com/mojason-81",
-  "display":    function(){
-    var formattedEmail = HTMLemail.replace("%data%", contact.email);
-    var formattedLinkedIn = HTMLlinkedin.replace("%data%", bio.contact.linkedin);
-    var formattedGoogle = HTMLgoogle.replace("%data%", bio.contact.google);
-    var formattedTwitter = HTMLtwitter.replace("%data%", contact.twitter);
-    var formattedGitHub = HTMLgithub.replace("%data%", contact.github);
-    $("#topContacts").prepend(formattedEmail);
-    $("#topContacts").prepend(formattedLinkedIn);
-    $("#topContacts").prepend(formattedGoogle);
-    $("#topContacts").prepend(formattedTwitter);
-    $("#topContacts").prepend(formattedGitHub);
-  }
-};
-
 var bio = {
   "name":       "Jason Force",
   "role":       "An Object in Motion",
   "contact": {
     "email":    "jason@mojason.com",
+    "mobile":   "816-555-1234",
     "linkedin": "https://www.linkedin.com/pub/jason-force/80/3a7/43a",
     "google":   "https://plus.google.com/u/0/116492679110338493730/posts/",
     "twitter":  "https://twitter.com/mojason_81",
@@ -34,11 +15,27 @@ var bio = {
   "message":    "Welcome, to my resume",
   "skills":     ["HTML","CSS","JavaScript","jQuery","Ruby","Rails"],
   "display":    function(){
+    var formattedEmail = HTMLemail.replace("%data%", bio.contact.email);
+    var formattedLinkedIn = HTMLlinkedin.replace("%data%", bio.contact.linkedin);
+    var formattedGoogle = HTMLgoogle.replace("%data%", bio.contact.google);
+    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
+    var formattedGitHub = HTMLgithub.replace("%data%", bio.contact.github);
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").prepend(formattedName, "<br>", formattedRole);
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+    $("#header").prepend(formattedName, "<br>", formattedRole, "<br>", formattedMobile);
     $("#header").prepend(formattedBioPic);
+    $("#topContacts").prepend(formattedEmail);
+    $("#topContacts").prepend(formattedLinkedIn);
+    $("#topContacts").prepend(formattedGoogle);
+    $("#topContacts").prepend(formattedTwitter);
+    $("#topContacts").prepend(formattedGitHub);
+    $("#footerContacts").prepend(formattedLinkedIn);
+    $("#footerContacts").prepend(formattedGoogle);
+    $("#footerContacts").prepend(formattedTwitter);
+    $("#footerContacts").prepend(formattedEmail);
+    $("#footerContacts").prepend(formattedGitHub);
   },
   "displaySkills":    function(){
     if (bio.skills.length > 0){
@@ -196,6 +193,7 @@ var project = {
       var formattedTitle = HTMLprojectTitle.replace("%data%", project.projects[item].title);
       var formattedDescription = HTMLprojectDescription.replace("%data%", project.projects[item].description);
       var formattedImage = HTMLprojectImage.replace("%data%", project.projects[item].image);
+      formattedTitle = formattedTitle.replace("%urldata%", project.projects[item].url);
       $("#projects").append(HTMLprojectStart);
       $(".project-entry:last").append(formattedTitle);
       $(".project-entry:last").append(formattedDescription);
@@ -214,7 +212,6 @@ var inName = function(){
 
 //Calling functions to display resume info
 bio.display();
-contact.display();
 work.display();
 education.display();
 bio.displaySkills();
