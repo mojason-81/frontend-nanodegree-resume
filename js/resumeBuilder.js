@@ -4,7 +4,7 @@ var bio = {
   "role":       "An Object in Motion",
   "contact": {
     "email":    "jason@mojason.com",
-    "mobile":   "816-555-1234",
+    //"mobile":   "816-555-1234",  // Commenting out mobile number
     "linkedin": "https://www.linkedin.com/pub/jason-force/80/3a7/43a",
     "google":   "https://plus.google.com/u/0/116492679110338493730/posts/",
     "twitter":  "https://twitter.com/mojason_81",
@@ -23,8 +23,9 @@ var bio = {
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
-    $("#header").prepend(formattedName, "<br>", formattedRole, "<br>", formattedMobile);
+    //var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+    // Commenting out mobile number
+    $("#header").prepend(formattedName, "<br>", formattedRole, "<br>");//, formattedMobile);
     $("#header").prepend(formattedBioPic);
     $("#topContacts").prepend(formattedEmail);
     $("#topContacts").prepend(formattedLinkedIn);
@@ -101,7 +102,7 @@ var education = {
     {
       "title":  "Front End Developer Nanodegree",
       "school": "Udacity",
-      "date":   2015,
+      "date":   "2016 - In progress",
       "url":    "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     },
     {
