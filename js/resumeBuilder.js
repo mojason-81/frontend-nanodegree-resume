@@ -38,7 +38,7 @@ var bio = {
     $("#footerContacts").prepend(formattedGitHub);
     if (bio.skills.length > 0){
       $("#header").append(HTMLskillsStart);
-      for (skill in bio.skills) {
+      for (var skill in bio.skills) {
         if (bio.skills.hasOwnProperty(skill)){
           $("#skills").append(HTMLskills.replace("%data%",bio.skills[skill]));
         }
@@ -54,7 +54,7 @@ var work = {
       "position":     "Software Engineer I",
       "location":     "Overland Park, KS",
       "dates":        "Oct 2015 - Present",
-      "description":  "I'll find out soon enough."
+      "description":  "Working as part an Agile development team, engineer an enterprise solution for our internal accounting department.  Application stack includes Ruby on Rails for API, Ember.js for UI, Oracle 11g/R2 database, Perl 5.1x for system processes.  Stack runs on RHEL 5/6."
     },
     {
       "employer":     "Smart Warehousing",
@@ -72,7 +72,7 @@ var work = {
     }
   ],
   "display":    function(){
-    for (job in work.jobs){
+    for (var job in work.jobs){
       if (work.jobs.hasOwnProperty(job)){
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -148,7 +148,7 @@ var education = {
     }
   ],
   "display":    function(){
-    for (item in education.schools){
+    for (var item in education.schools){
       if (education.schools.hasOwnProperty(item)){
         var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[item].name);
         var formattedSchoolCity = HTMLschoolLocation.replace("%data%", education.schools[item].location);
@@ -169,12 +169,12 @@ var education = {
       if (education.onlineCourses.hasOwnProperty(item)){
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[item].title);
         var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[item].school);
-        var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[item].date);
+        var formattedOnlineDate = HTMLonlineDates.replace("%data%", education.onlineCourses[item].date);
         //var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[item].url);
         formattedTitle = formattedTitle.replace("%urldata%", education.onlineCourses[item].url);
         $("#education").append(HTMLschoolStart);
         $(".education-entry:last").append(formattedTitle + formattedSchool);
-        $(".education-entry:last").append(formattedDate, "<br>");
+        $(".education-entry:last").append(formattedOnlineDate, "<br>");
         //$(".education-entry:last").append(formattedURL);
         $(".education-entry:last").append("<hr>");
       }
@@ -200,7 +200,7 @@ var project = {
     }
   ],
   "display":  function(){
-    for (item in project.projects){
+    for (var item in project.projects){
       if (project.projects.hasOwnProperty(item)){
         var formattedTitle = HTMLprojectTitle.replace("%data%", project.projects[item].title);
         var formattedDescription = HTMLprojectDescription.replace("%data%", project.projects[item].description);
